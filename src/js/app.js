@@ -27,17 +27,21 @@ class Team {
 }
 
 class Person {
-  constructor(name, type, health) {
+  constructor(name, type, health, level, attack, defence) {
     this.name = name;
     this.type = type;
     this.health = health;
+    this.level = level;
+    this.attack = attack;
+    this.defence = defence;
   }
 }
 
-const person1 = new Person('P1', 'Person', 50);
-const person2 = new Person('P2', 'Person', 40);
+const person1 = new Person('Лучник', 'Bowmen', 50, 1, 40, 10);
+const person2 = new Person('Маг', 'Magician', 40, 1, 25, 40);
+const person3 = new Person('Зомби', 'Zombie', 30, 1, 30, 10);
 
-const myTeam = new Team(person1, person2);
+const myTeam = new Team(person1, person2, person3);
 
 for (const p of myTeam) {
   // eslint-disable-next-line no-console
